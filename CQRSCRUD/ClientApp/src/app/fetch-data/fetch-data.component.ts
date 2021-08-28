@@ -3,14 +3,15 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html'
+  templateUrl: './fetch-data.component.html',
+  styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
-  public forecasts: Clientes[];
+  public clientes: Clientes[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     http.get<Clientes[]>(baseUrl + 'api/Cliente').subscribe(result => {
-      this.forecasts = result;
+      this.clientes = result;
     }, error => console.error(error));
   }
 

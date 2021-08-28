@@ -2,13 +2,12 @@
   <h1 id="tableLabel">Clientes</h1>
   
   <p>
-    Lista de todos os clientes.
       <button class="btn btn-primary" (click)="newClient($event)">Inserir</button>
   </p>
 
-<p *ngIf="!forecasts"><em>Carregando...</em></p>
+<p *ngIf="!clientes"><em>Carregando...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="clientes">
   <thead>
     <tr>
       <th>Comandos</th>
@@ -19,16 +18,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
+    <tr *ngFor="let cliente of clientes">
       <td>
-        <button className="btn btn-edit btn-edit-l" (click)="handleEdit(forecast.id)">Editar</button>
-        <button className="btn btn-del btn-del-l" (click)="handleDelete(forecast.id, forecast.razaoSocial)">Deletar</button>
-
+        <button class="btn btn-edit btn-edit-l" (click)="handleEdit(cliente.id)">Editar</button>
+        <button class="btn btn-del btn-del-l" (click)="handleDelete(cliente.id, cliente.razaoSocial)">Deletar</button>
       </td>
-      <td>{{ forecast.id }}</td>
-      <td>{{ forecast.razaoSocial }}</td>
-      <td>{{ forecast.cnpj }}</td>
-      <td>{{ forecast.dataCadastramento }}</td>
+      <td>{{ cliente.id }}</td>
+      <td>{{ cliente.razaoSocial }}</td>
+      <td>{{ cliente.cnpj }}</td>
+      <td>{{ cliente.dataCadastramento }}</td>
     </tr>
   </tbody>
 </table>
