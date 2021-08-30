@@ -2,7 +2,7 @@
   <h1 id="tableLabel">Clientes</h1>
   
   <p>
-      <button class="btn btn-primary" (click)="newClient($event)">Inserir</button>
+      <button class="btn btn-primary" [routerLink]="['/addCliente', 0]"> Novo </button>
   </p>
 
 <p *ngIf="!clientes"><em>Carregando...</em></p>
@@ -20,8 +20,8 @@
   <tbody>
     <tr *ngFor="let cliente of clientes">
       <td>
-        <button class="btn btn-edit btn-edit-l" (click)="handleEdit(cliente.id)">Editar</button>
-        <button class="btn btn-del btn-del-l" (click)="handleDelete(cliente.id, cliente.razaoSocial)">Deletar</button>
+        <button class="btn btn-edit btn-edit-l" [routerLink]="['/addCliente', cliente.id]">Editar</button>
+        <button class="btn btn-del btn-del-l" (click)="handleDelete(cliente.id, cliente.razaoSocial)">Excluir</button>
       </td>
       <td>{{ cliente.id }}</td>
       <td>{{ cliente.razaoSocial }}</td>

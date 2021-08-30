@@ -1,7 +1,23 @@
-<h1>Cliente</h1>
+<h1>{{(this.cliente.id != '0' ? 'Editar':'Incluir')+' Cliente'}}</h1>
 
-<p>Altera ou insere cliente</p>
+<form [formGroup]="formCliente" (ngSubmit)="onSubmit()">
 
-<p aria-live="polite">Current count: <strong>{{ currentCount }}</strong></p>
+  <div class="form-group">
+    <label for="razaoSocial">Razão Social</label>
+    <input type="text" class="form-control" formControlName="razaoSocial" id="razaoSocial" value={{this.cliente.razaoSocial}} required>
+  </div>
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+  <div class="form-group">
+    <label for="cnpj">CNPJ</label>
+    <input type="text" class="form-control" formControlName="cnpj" id="cnpj" value={{this.cliente.cnpj}} pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" required>
+  </div>
+
+  <div class="form-group">
+    <label for="dataCadastramento">Data Cadastramento</label>
+    <input type="text" class="form-control" formControlName="dataCadastramento" id="dataCadastramento" value={{this.cliente.dataCadastramento}} disabled>
+  </div>
+
+  <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+  <a  routerLink="/clientes" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
+
+</form>

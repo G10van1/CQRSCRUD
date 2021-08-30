@@ -8,6 +8,6 @@ namespace CQRSCRUD.Resources.Commands
     {       
         public string RazaoSocial { get; set; }
         public string CNPJ { get; set; }
-        public DateTime DataCadastramento { get; set; }
+        public string DataCadastramento { get; set; }
     }
 }

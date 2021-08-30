@@ -14,6 +14,6 @@ namespace CQRSCRUD.Models
         public string RazaoSocial { get; set; }
         [StringLength(18, MinimumLength = 14)]
         public string CNPJ { get; set; }
-        public DateTime DataCadastramento { get; set; }
+        public string DataCadastramento { get; set; }
     }
 }
