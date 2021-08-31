@@ -14,7 +14,7 @@
 <h3>Algumas informações para o deploy:</h3>
 <ul>
   <li>Na pasta Database existe um script do banco de dados, este deve ser importado no SQL Server;</li>
-  <li>No projeto principal (CQRSCRUD), atualizar a configuração de “Data Source” do atributo “DefaultConnection”, no arquivo “appsettings.json” que fica na raiz do projeto;/li>
-  <li>No projeto de teste unitário (CQRSCRUDTest), atualizar o valor da variável “baseUrl” do método “Setup” com a nova Url da aplicação./li>
+  <li>No projeto principal (CQRSCRUD), atualizar a configuração de “Data Source” do atributo “DefaultConnection”, no arquivo “appsettings.json” que fica na raiz do projeto;</li>
+  <li>No projeto de teste unitário (CQRSCRUDTest), atualizar o valor da variável “baseUrl” do método “Setup” com a nova Url da aplicação.</li>
 </ul>
 
