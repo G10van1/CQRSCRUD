@@ -1,5 +1,5 @@
 # CQRSCRUD
-<h3>CRUD Clientes com CQRS</h3>
+<h2>CRUD Clientes com CQRS</h2>
 <p>Exemplo de CRUD de Clientes com uso das seguintes tecnologias:</p>
 <ul>
   <li><a href='https://get.asp.net/'>ASP.NET Core</a> e <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> para o código do back-end;</li>
@@ -12,7 +12,9 @@
 </ul>
 
 <h3>Algumas informações para o deploy:</h3>
-- Na pasta Database existe um script do banco de dados, este deve ser importado no SQL Server;
-- No projeto principal (CQRSCRUD), atualizar a configuração de “Data Source” do atributo “DefaultConnection”, no arquivo “appsettings.json” que fica na raiz do projeto;
-- No projeto de teste unitário (CQRSCRUDTest), atualizar o valor da variável “baseUrl” do método “Setup” com a nova Url da aplicação.
+<ul>
+  <li>Na pasta Database existe um script do banco de dados, este deve ser importado no SQL Server;</li>
+  <li>No projeto principal (CQRSCRUD), atualizar a configuração de “Data Source” do atributo “DefaultConnection”, no arquivo “appsettings.json” que fica na raiz do projeto;/li>
+  <li>No projeto de teste unitário (CQRSCRUDTest), atualizar o valor da variável “baseUrl” do método “Setup” com a nova Url da aplicação./li>
+</ul>
 
