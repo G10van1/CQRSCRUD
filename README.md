@@ -1,6 +1,5 @@
 # CQRSCRUD
-CRUD Clientes com CQRS
-<h1>CRUD Clientes com CQRS</h1>
+<h3>CRUD Clientes com CQRS</h3>
 <p>Exemplo de CRUD de Clientes com uso das seguintes tecnologias:</p>
 <ul>
   <li><a href='https://get.asp.net/'>ASP.NET Core</a> e <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> para o código do back-end</li>
