@@ -35,7 +35,7 @@ namespace CQRSCRUDTest
             var url = baseUrl + "api/Cliente";
             var response = await clientHttp.PostAsync(url, data);
 
-            Assert.AreEqual(response.StatusCode, 200);
+            Assert.AreEqual((int)response.StatusCode, 200);
         }
 
         [Test]
@@ -68,7 +68,7 @@ namespace CQRSCRUDTest
             url = baseUrl + "api/Cliente/" + clientes[index].Id;
             response = await clientHttp.DeleteAsync(url);
 
-            Assert.AreEqual(response.StatusCode, 200);
+            Assert.AreEqual((int)response.StatusCode, 200);
         }
 
         [Test]
