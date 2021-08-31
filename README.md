@@ -10,3 +10,9 @@
   <li>Padrão de Arquitetura CQRS(Command and Query Responsibility Segregation);</li>
   <li>Padrão de projeto Mediator com Dependency Injection.</li>
 </ul>
+
+<h3>Algumas informações para o deploy:</h3>
+- Na pasta Database existe um script do banco de dados, este deve ser importado no SQL Server;
+- No projeto principal (CQRSCRUD), atualizar a configuração de “Data Source” do atributo “DefaultConnection”, no arquivo “appsettings.json” que fica na raiz do projeto;
+- No projeto de teste unitário (CQRSCRUDTest), atualizar o valor da variável “baseUrl” do método “Setup” com a nova Url da aplicação.
+
